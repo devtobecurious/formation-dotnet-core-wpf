@@ -6,7 +6,20 @@
         xmlns:local="clr-namespace:HaryPotterWpf.Win.UI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="50"></Setter>
+            <Setter Property="Height" Value="50"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
+        <Button x:Name="btnName" Click="btnName_Click" >Launch</Button>
 
+        <StackPanel ButtonBase.Click="StackPanel_Click">
+            <Button>One</Button>
+            <Button>Two</Button>
+            <Button>Three</Button>
+        </StackPanel>
     </Grid>
 </Window>

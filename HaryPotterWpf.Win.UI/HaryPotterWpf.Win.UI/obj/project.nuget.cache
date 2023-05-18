@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c7V26M483o3Z31ycIK3wn0aj9etN5P3V6W9ERxKlcXfdT+rvg/69Zks2OcL/suZrcwheiLEdBZtNYkWYebX5mA==",
+  "dgSpecHash": "p3idmHgdTp2Q+sFZyh65ktcwcDzlnXTD3wxlP71cEoo0mpORNnb7Z8j4OVew5XRdUvMTToVVk4i1O7YJCq+GXw==",
   "success": true,
-  "projectFilePath": "D:\\Works\\Formations\\Templates\\dotnet\\dotnet-wpf\\HaryPotterWpf.Win.UI\\HaryPotterWpf.Win.UI\\HaryPotterWpf.Win.UI.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\evan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.2\\microsoft.windowsdesktop.app.ref.7.0.2.nupkg.sha512",
-    "C:\\Users\\evan\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.2\\microsoft.netcore.app.ref.7.0.2.nupkg.sha512",
-    "C:\\Users\\evan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.2\\microsoft.aspnetcore.app.ref.7.0.2.nupkg.sha512",
-    "C:\\Users\\evan\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.2\\microsoft.netcore.app.host.win-x64.7.0.2.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\evan\\OneDrive\\Documents\\Developments\\Formations\\dotnet\\formation-dotnet-core-wpf\\HaryPotterWpf.Win.UI\\HaryPotterWpf.Win.UI\\HaryPotterWpf.Win.UI.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

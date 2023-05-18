@@ -8,35 +8,26 @@
     "net7.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\evan\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\evan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Works\\Formations\\Templates\\dotnet\\dotnet-wpf\\HaryPotterWpf.Win.UI\\HaryPotterWpf.Win.UI\\HaryPotterWpf.Win.UI.csproj",
+      "projectUniqueName": "C:\\Users\\evan\\OneDrive\\Documents\\Developments\\Formations\\dotnet\\formation-dotnet-core-wpf\\HaryPotterWpf.Win.UI\\HaryPotterWpf.Win.UI\\HaryPotterWpf.Win.UI.csproj",
       "projectName": "HaryPotterWpf.Win.UI",
-      "projectPath": "D:\\Works\\Formations\\Templates\\dotnet\\dotnet-wpf\\HaryPotterWpf.Win.UI\\HaryPotterWpf.Win.UI\\HaryPotterWpf.Win.UI.csproj",
+      "projectPath": "C:\\Users\\evan\\OneDrive\\Documents\\Developments\\Formations\\dotnet\\formation-dotnet-core-wpf\\HaryPotterWpf.Win.UI\\HaryPotterWpf.Win.UI\\HaryPotterWpf.Win.UI.csproj",
       "packagesPath": "C:\\Users\\evan\\.nuget\\packages\\",
-      "outputPath": "D:\\Works\\Formations\\Templates\\dotnet\\dotnet-wpf\\HaryPotterWpf.Win.UI\\HaryPotterWpf.Win.UI\\obj\\",
+      "outputPath": "C:\\Users\\evan\\OneDrive\\Documents\\Developments\\Formations\\dotnet\\formation-dotnet-core-wpf\\HaryPotterWpf.Win.UI\\HaryPotterWpf.Win.UI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
         "C:\\Users\\evan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -65,24 +56,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.2, 7.0.2]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[7.0.2, 7.0.2]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.2, 7.0.2]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.2, 7.0.2]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -91,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.2.23157.25\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

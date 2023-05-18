@@ -9,6 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace HaryPotterWpf.Win.UI
 {
     /// <summary>
@@ -19,6 +20,16 @@ namespace HaryPotterWpf.Win.UI
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnName_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Test", "Test", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void StackPanel_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show((e.Source as Button)?.Content.ToString());
         }
     }
 }
