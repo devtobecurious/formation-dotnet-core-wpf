@@ -31,5 +31,10 @@ namespace HaryPotterWpf.Win.UI
         {
             MessageBox.Show((e.Source as Button)?.Content.ToString());
         }
+
+        private void Grid_PreviewLostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+
+        }
     }
 }
