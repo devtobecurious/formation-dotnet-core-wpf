@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\evan\OneDrive\Documents\Developments\Formations\dotnet\formation-dotnet-core-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\App.xaml
-11407045341
-
+3-17150271
+1-1645379463
 5554353751
 1981827736222
-MainWindow.xaml;
+Custom-1-Styles.xaml;MainStyles.xaml;MainWindow.xaml;
 
 False
 

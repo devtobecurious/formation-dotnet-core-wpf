@@ -40,3 +40,8 @@ C:\Users\evan\OneDrive\Documents\Developments\Formations\dotnet\formation-dotnet
 C:\Users\evan\OneDrive\Documents\Developments\Formations\dotnet\formation-dotnet-core-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\HaryPotterWpf.Win.UI.pdb
 C:\Users\evan\OneDrive\Documents\Developments\Formations\dotnet\formation-dotnet-core-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\HaryPotterWpf.Win.UI.genruntimeconfig.cache
 C:\Users\evan\OneDrive\Documents\Developments\Formations\dotnet\formation-dotnet-core-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\ref\HaryPotterWpf.Win.UI.dll
+C:\Users\evan\OneDrive\Documents\Developments\Formations\dotnet\formation-dotnet-core-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\bin\Debug\net7.0-windows\Resources\chewie.png
+C:\Users\evan\OneDrive\Documents\Developments\Formations\dotnet\formation-dotnet-core-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\HaryPotterWpf.Win.UI_Content.g.cs
+C:\Users\evan\OneDrive\Documents\Developments\Formations\dotnet\formation-dotnet-core-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\Custom-1-Styles.baml
+C:\Users\evan\OneDrive\Documents\Developments\Formations\dotnet\formation-dotnet-core-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\MainStyles.baml
+C:\Users\evan\OneDrive\Documents\Developments\Formations\dotnet\formation-dotnet-core-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\App.baml

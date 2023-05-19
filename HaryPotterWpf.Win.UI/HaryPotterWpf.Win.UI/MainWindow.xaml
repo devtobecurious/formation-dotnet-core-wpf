@@ -12,6 +12,13 @@
             <Setter Property="Height" Value="50"></Setter>
             <Setter Property="Margin" Value="10"></Setter>
         </Style>
+
+        
+
+        <Style x:Key="buttonTransparent" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="BorderBrush" Value="Transparent"></Setter>
+        </Style>
     </Window.Resources>
     <Grid>
 
@@ -22,6 +29,9 @@
         </StackPanel>-->
 
         <Grid TextBoxBase.PreviewLostKeyboardFocus="Grid_PreviewLostKeyboardFocus">
+            <Grid.Resources>
+                <SolidColorBrush x:Key="MyBrush" Color="Gold"/>
+            </Grid.Resources>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -32,9 +42,9 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Button x:Name="btnName" Click="btnName_Click" Grid.Row="0" Grid.ColumnSpan="2" >Launch</Button>
+            <Button x:Name="btnName" Click="btnName_Click" Grid.Row="0" Grid.ColumnSpan="2" Style="{DynamicResource buttonColorBackground}" >Launch</Button>
 
-            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid Grid.Row="1" Grid.ColumnSpan="2" x:Name="grdInputs" >
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
@@ -42,6 +52,18 @@
                 <TextBox Grid.Row="0"></TextBox>
                 <TextBox Grid.Row="1"></TextBox>
             </Grid>
+
+            <Slider Grid.Row="2" Grid.Column="0" Width="200" x:Name="nbSteps"></Slider>
+            <TextBlock Grid.Row="2" Grid.Column="1" FontSize="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Text="{Binding ElementName=nbSteps, Mode=OneWay, Path=Value}"></TextBlock>
+            
+            <StackPanel x:Name="grdSteps" Grid.Row="3" Visibility="Hidden" Grid.ColumnSpan="2">
+                <!--<Button>
+                    <Image Source="./Resources/chewie.png"></Image>
+                </Button>-->
+                <Button Click="Button_Click" Style="{StaticResource buttonTransparent}">
+                    <Image Source="pack://application:,,,/Resources/chewie-resource.png" Stretch="Uniform"></Image>
+                </Button>
+            </StackPanel>
         </Grid>
         
         

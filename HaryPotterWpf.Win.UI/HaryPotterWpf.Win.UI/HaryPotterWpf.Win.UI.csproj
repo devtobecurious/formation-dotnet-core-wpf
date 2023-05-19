@@ -8,4 +8,19 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\chewie-resource.png" />
+    <None Remove="Resources\chewie.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\chewie.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\chewie-resource.png" />
+  </ItemGroup>
+
 </Project>
