@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HaryPotterWpf.Win.UI"
         mc:Ignorable="d"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
         <Style TargetType="Button">
@@ -44,7 +45,7 @@
             </Grid.RowDefinitions>
             <Button x:Name="btnName" Click="btnName_Click" Grid.Row="0" Grid.ColumnSpan="2" Style="{DynamicResource buttonColorBackground}" >Launch</Button>
 
-            <Grid Grid.Row="1" Grid.ColumnSpan="2" x:Name="grdInputs" >
+            <Grid Grid.Row="1" Grid.ColumnSpan="2" x:Name="grdInputs"  >
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
@@ -55,12 +56,12 @@
 
             <Slider Grid.Row="2" Grid.Column="0" Width="200" x:Name="nbSteps"></Slider>
             <TextBlock Grid.Row="2" Grid.Column="1" FontSize="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Text="{Binding ElementName=nbSteps, Mode=OneWay, Path=Value}"></TextBlock>
-            
-            <StackPanel x:Name="grdSteps" Grid.Row="3" Visibility="Hidden" Grid.ColumnSpan="2">
+
+            <StackPanel x:Name="grdSteps" Grid.Row="3" Visibility="Hidden" Grid.ColumnSpan="2" DataContext="{Binding Wookiee}">
                 <!--<Button>
                     <Image Source="./Resources/chewie.png"></Image>
                 </Button>-->
-                <Button Click="Button_Click" Style="{StaticResource buttonTransparent}">
+                <Button x:Name="btnOneWookie" Click="Button_Click" Style="{StaticResource buttonTransparent}" ToolTip="{Binding Label}">
                     <Image Source="pack://application:,,,/Resources/chewie-resource.png" Stretch="Uniform"></Image>
                 </Button>
             </StackPanel>

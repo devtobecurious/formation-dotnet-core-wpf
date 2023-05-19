@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using HaryPotterWpf.Win.UI.Models;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -17,9 +18,12 @@ namespace HaryPotterWpf.Win.UI
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Wookiee Wookiee { get; set; } = new() {  Label = "Chewier" };
+
         public MainWindow()
         {
             InitializeComponent();
+            //this.btnOneWookie.DataContext = this.Wookiee;
         }
 
         private void btnName_Click(object sender, RoutedEventArgs e)
