@@ -38,6 +38,8 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -47,7 +49,15 @@
             </Grid.RowDefinitions>
             <Button x:Name="btnName" Click="btnName_Click" Grid.Row="0" Grid.ColumnSpan="1" Style="{DynamicResource buttonColorBackground}" >Launch</Button>
             <Button x:Name="btnName2" Click="btnName2_Click" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" Style="{DynamicResource buttonColorBackground}" >Launch 2</Button>
+            <Button x:Name="btnName3" Click="btnName3_Click" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" Style="{DynamicResource buttonColorBackground}" >Launch freeze</Button>
+            <Button x:Name="btnName4" Click="btnName4_Click" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1" Style="{DynamicResource buttonColorBackground}" >Launch not freeze</Button>
 
+            <Grid Grid.Column="3" Grid.Row="1">
+                <Label>
+                    <TextBlock Text="{Binding Index}" ></TextBlock>
+                </Label>
+            </Grid>
+            
             <Grid Grid.Row="1" Grid.ColumnSpan="2" x:Name="grdInputs" DataContext="{Binding Wookiee}">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>

@@ -1,4 +1,5 @@
 ﻿using HaryPotterWpf.Win.UI.Models;
+using System.ComponentModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,14 +17,36 @@ namespace HaryPotterWpf.Win.UI
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         public Wookiee Wookiee { get; set; } = new() {  Label = "Chewie" };
+
+        private BackgroundWorker worker = new();
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        private int index = 0;
+        public int Index
+        {
+            get => index;
+            set
+            {
+                index = value;
+                this.PropertyChanged?.Invoke(this, new(nameof(Index)));
+            }
+        }
 
         public MainWindow()
         {
             InitializeComponent();
             //this.btnOneWookie.DataContext = this.Wookiee;
+
+            this.worker.DoWork += Worker_DoWork;
+        }
+
+        private void Worker_DoWork(object? sender, DoWorkEventArgs e)
+        {
+            this.SlowMethod(1000);
         }
 
         private void btnName_Click(object sender, RoutedEventArgs e)
@@ -64,6 +87,25 @@ namespace HaryPotterWpf.Win.UI
         private void btnName2_Click(object sender, RoutedEventArgs e)
         {
             this.Wookiee.Label = "Kashyyk";
+        }
+
+        private void btnName3_Click(object sender, RoutedEventArgs e)
+        {
+            this.SlowMethod(1000);
+        }
+
+        private void SlowMethod(int nbIteration = 10000)
+        {
+            for (int i = 0; i < nbIteration; i++)
+            {
+                this.Index = i;
+                Thread.Sleep(100);
+            }
+        }
+
+        private void btnName4_Click(object sender, RoutedEventArgs e)
+        {
+            this.worker.RunWorkerAsync();
         }
     }
 }
