@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -7,39 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
-using System.Windows.Media.Imaging;
 
 namespace HaryPotterWpf.Win.UI.Models.Converters
 {
-    public class PathToImageConverter : IValueConverter
+    public class EmptyOrNotExistPathVisibilityConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            string path = (string)value;
+            var visibility = Visibility.Visible;
+            var path = value as string;
 
-            if (string.IsNullOrEmpty(path))
+            if(string.IsNullOrEmpty(path))
             {
-                return DependencyProperty.UnsetValue;
+                return Visibility.Hidden;
             }
 
             path = Path.Combine(Environment.CurrentDirectory, "Images", path);
-
             if (! File.Exists(path))
             {
-                return DependencyProperty.UnsetValue;
+                visibility = Visibility.Hidden;
             }
 
-            var image = new BitmapImage();
-
-            using var stream = new FileStream(path, FileMode.Open, FileAccess.Read);
-            image.BeginInit();
-
-            image.CacheOption = BitmapCacheOption.OnLoad;
-            image.StreamSource = stream;
-
-            image.EndInit();
-
-            return image;
+            return visibility;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
