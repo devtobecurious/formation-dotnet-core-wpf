@@ -43,14 +43,15 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Button x:Name="btnName" Click="btnName_Click" Grid.Row="0" Grid.ColumnSpan="2" Style="{DynamicResource buttonColorBackground}" >Launch</Button>
+            <Button x:Name="btnName" Click="btnName_Click" Grid.Row="0" Grid.ColumnSpan="1" Style="{DynamicResource buttonColorBackground}" >Launch</Button>
+            <Button x:Name="btnName2" Click="btnName2_Click" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" Style="{DynamicResource buttonColorBackground}" >Launch 2</Button>
 
-            <Grid Grid.Row="1" Grid.ColumnSpan="2" x:Name="grdInputs"  >
+            <Grid Grid.Row="1" Grid.ColumnSpan="2" x:Name="grdInputs" DataContext="{Binding Wookiee}">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-                <TextBox Grid.Row="0"></TextBox>
+                <TextBox Grid.Row="0" Text="{Binding Label, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 <TextBox Grid.Row="1"></TextBox>
             </Grid>
 

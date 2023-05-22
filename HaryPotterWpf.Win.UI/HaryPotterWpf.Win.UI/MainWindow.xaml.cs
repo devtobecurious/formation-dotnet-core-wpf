@@ -18,7 +18,7 @@ namespace HaryPotterWpf.Win.UI
     /// </summary>
     public partial class MainWindow : Window
     {
-        public Wookiee Wookiee { get; set; } = new() {  Label = "Chewier" };
+        public Wookiee Wookiee { get; set; } = new() {  Label = "Chewie" };
 
         public MainWindow()
         {
@@ -29,7 +29,7 @@ namespace HaryPotterWpf.Win.UI
         private void btnName_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Test", "Test", MessageBoxButton.OK, MessageBoxImage.Error);
-            this.grdInputs.Visibility = Visibility.Hidden;
+            this.grdInputs.Visibility = Visibility.Visible;
             this.grdSteps.Visibility = Visibility.Visible;
 
             //var resource = this.Resources["buttonColorBackground"] as Style;
@@ -59,6 +59,11 @@ namespace HaryPotterWpf.Win.UI
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(sender.ToString());
+        }
+
+        private void btnName2_Click(object sender, RoutedEventArgs e)
+        {
+            this.Wookiee.Label = "Kashyyk";
         }
     }
 }
