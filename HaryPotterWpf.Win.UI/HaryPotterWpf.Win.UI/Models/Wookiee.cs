@@ -21,6 +21,17 @@ namespace HaryPotterWpf.Win.UI.Models
             }
         }
 
+        private string avatar = string.Empty;
+        public string Avatar
+        {
+            get => avatar;
+            set
+            {
+                avatar = value;
+                this.PropertyChanged?.Invoke(this, new(nameof (Avatar)));
+            }
+        }
+
         public event PropertyChangedEventHandler? PropertyChanged;
     }
 }

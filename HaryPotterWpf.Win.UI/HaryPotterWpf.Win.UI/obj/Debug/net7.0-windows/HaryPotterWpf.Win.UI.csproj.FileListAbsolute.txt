@@ -50,3 +50,8 @@ D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterW
 D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\MainStyles.baml
 D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\HaryPotterWpf.Win.UI_Content.g.cs
 D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\App.baml
+D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\bin\Debug\net7.0-windows\Images\avatar-01.jpg
+D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\bin\Debug\net7.0-windows\Images\avatar-02.jpg
+D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\bin\Debug\net7.0-windows\Images\avatar-03.jpg
+D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\bin\Debug\net7.0-windows\Images\avatar-04.png
