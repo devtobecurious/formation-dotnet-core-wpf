@@ -9,13 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ViewModels\**" />
-    <EmbeddedResource Remove="ViewModels\**" />
-    <None Remove="ViewModels\**" />
-    <Page Remove="ViewModels\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Resources\chewie-resource.png" />
     <None Remove="Resources\chewie.png" />
   </ItemGroup>
@@ -28,10 +21,6 @@
 
   <ItemGroup>
     <Resource Include="Resources\chewie-resource.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>
