@@ -59,3 +59,5 @@ D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterW
 D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\Wookiees\ListWookiees\ListWookies.baml
 D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\Wookiees\EditWookiee\EditWookiee.g.cs
 D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\Wookiees\EditWookiee\EditWookiee.baml
+D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\Shared\MainMenu.g.cs
+D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\Shared\MainMenu.baml

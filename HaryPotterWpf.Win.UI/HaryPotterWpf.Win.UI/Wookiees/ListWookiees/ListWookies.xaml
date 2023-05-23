@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HaryPotterWpf.Win.UI.Wookiees.ListWookiees"
+        xmlns:uc="clr-namespace:HaryPotterWpf.Win.UI.Shared"
         xmlns:viewModel="clr-namespace:HaryPotterWpf.Win.UI.Wookiees.ListWookiees.ViewModels"
         mc:Ignorable="d"
         Title="ListWookies" Height="450" Width="800">
@@ -11,11 +12,13 @@
         <viewModel:ListWookieesViewModel></viewModel:ListWookieesViewModel>
     </Window.DataContext>-->
     <Grid>
-
+        
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
+        <uc:MainMenu NbItems="2"></uc:MainMenu>
+        
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.1*"></ColumnDefinition>
