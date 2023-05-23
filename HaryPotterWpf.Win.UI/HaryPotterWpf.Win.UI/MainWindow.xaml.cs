@@ -77,6 +77,8 @@ namespace HaryPotterWpf.Win.UI
 
                 this.MoveAllWookies();
             }
+
+
         }
 
         private void btnName_Click(object sender, RoutedEventArgs e)
@@ -170,6 +172,6 @@ namespace HaryPotterWpf.Win.UI
         private void btnStop_Click(object sender, RoutedEventArgs e)
         {
             this.worker.CancelAsync();
-        }
+        } 
     }
 }
