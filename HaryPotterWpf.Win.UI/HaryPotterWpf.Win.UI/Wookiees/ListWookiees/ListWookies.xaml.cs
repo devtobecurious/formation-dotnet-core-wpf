@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HaryPotterWpf.Win.UI.Wookiees.ListWookiees.Services;
+using HaryPotterWpf.Win.UI.Wookiees.ListWookiees.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,14 @@ namespace HaryPotterWpf.Win.UI.Wookiees.ListWookiees
         public ListWookies()
         {
             InitializeComponent();
+
+            ListWookieesWindowService service = new();
+            ListWookieesViewModel viewModel = new()
+            {
+                WindowService = service
+            };
+
+            this.DataContext = viewModel;
         }
     }
 }

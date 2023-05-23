@@ -7,10 +7,24 @@
         xmlns:viewModel="clr-namespace:HaryPotterWpf.Win.UI.Wookiees.ListWookiees.ViewModels"
         mc:Ignorable="d"
         Title="ListWookies" Height="450" Width="800">
-    <Window.DataContext>
+    <!--<Window.DataContext>
         <viewModel:ListWookieesViewModel></viewModel:ListWookieesViewModel>
-    </Window.DataContext>
+    </Window.DataContext>-->
     <Grid>
-        
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" x:Name="btnAdd" Command="{Binding AddNewWookie}">Add</Button>
+            <Button Grid.Row="0" Grid.Column="1" x:Name="btnEdit" Command="{Binding EditNewWookie}">Edit</Button>
+        </Grid>
+        <DataGrid Grid.Row="1" ItemsSource="{Binding Wookiees}"></DataGrid>
     </Grid>
 </Window>

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\App.xaml
-4-298609243
+5-1298563463
 1-1645379463
-14-1005830088
+211843131967
 198-1079960804
-Custom-1-Styles.xaml;MainStyles.xaml;MainWindow.xaml;Wookiees\ListWookiees\ListWookies.xaml;
+Custom-1-Styles.xaml;MainStyles.xaml;MainWindow.xaml;Wookiees\EditWookiee\EditWookiee.xaml;Wookiees\ListWookiees\ListWookies.xaml;
 
-False
+True
 
