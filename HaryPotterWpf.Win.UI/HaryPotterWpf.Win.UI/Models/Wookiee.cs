@@ -9,7 +9,17 @@ namespace HaryPotterWpf.Win.UI.Models
 {
     public class Wookiee : INotifyPropertyChanged
     {
+        private static Random random = new Random();
+
         private string label = "";
+
+        public void Move()
+        {
+            var nextX = random.Next(-1, 2);
+            var nextY = random.Next(-1, 2);
+
+            this.Position = new(this.Position.X + nextX, this.Position.Y + nextY);
+        }
 
         public string Label
         {
@@ -29,6 +39,17 @@ namespace HaryPotterWpf.Win.UI.Models
             {
                 avatar = value;
                 this.PropertyChanged?.Invoke(this, new(nameof (Avatar)));
+            }
+        }
+
+        private Position position = new(1, 1);
+        public Position Position
+        {
+            get => position;
+            set
+            {
+                position = value;
+                this.PropertyChanged?.Invoke(this, new(nameof(Position)));
             }
         }
 

@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HaryPotterWpf.Win.UI"
+        xmlns:models="clr-namespace:HaryPotterWpf.Win.UI.Models"
         xmlns:converters="clr-namespace:HaryPotterWpf.Win.UI.Models.Converters"
         mc:Ignorable="d"
         DataContext="{Binding RelativeSource={RelativeSource Self}}"
@@ -12,6 +13,20 @@
         <converters:PathToImageConverter x:Key="pathToImageConverter"></converters:PathToImageConverter>
         <converters:EmptyOrNotExistPathVisibilityConverter x:Key="emptyOrNotExistPathVisibility"></converters:EmptyOrNotExistPathVisibilityConverter>
 
+        <DataTemplate DataType="{x:Type models:Wookiee}" x:Key="wookieAsLabel">
+            <Label >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*" ></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="{Binding Avatar, Converter={StaticResource pathToImageConverter}}" Width="50"></Image>
+                </Grid>
+                <Label.RenderTransform>
+                    <TranslateTransform X="{Binding Position.X}" Y="{Binding Position.Y}"></TranslateTransform>
+                </Label.RenderTransform>
+            </Label>
+        </DataTemplate>
+        
         <Style TargetType="Button">
             <Setter Property="Width" Value="50"></Setter>
             <Setter Property="Height" Value="50"></Setter>
@@ -74,7 +89,9 @@
             </StackPanel>
 
             <Slider Grid.Row="2" Grid.Column="0" Width="200" Height="50" x:Name="nbSteps" Value="{Binding NbWookies}"></Slider>
-            <TextBlock Grid.Row="2" Grid.Column="1" FontSize="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Text="{Binding ElementName=nbSteps, Mode=OneWay, Path=Value}"></TextBlock>
+            <Button Grid.Row="2" Grid.Column="1" Content="Start" x:Name="btnStart" Click="btnStart_Click"></Button>
+            <Button Grid.Row="2" Grid.Column="2" Content="Stop" x:Name="btnStop" Click="btnStop_Click"></Button>
+            <TextBlock Grid.Row="2" Grid.Column="3" FontSize="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Text="{Binding ElementName=nbSteps, Mode=OneWay, Path=Value}"></TextBlock>
 
             <StackPanel x:Name="grdSteps" Grid.Row="3" Visibility="Hidden" Grid.ColumnSpan="2" DataContext="{Binding Wookiee}">
                 <!--<Button>
@@ -84,7 +101,13 @@
                     <Image Source="pack://application:,,,/Resources/chewie-resource.png" Stretch="Uniform"></Image>
                 </Button>
             </StackPanel>
-            <ListBox ItemsSource="{Binding Wookiees}" Grid.Row="3" Grid.ColumnSpan="3"></ListBox>
+            <ListBox x:Name="lstWookies" ItemsSource="{Binding Wookiees}" Grid.Row="3" Grid.ColumnSpan="3"> <!--ItemTemplate="{StaticResource wookieAsLabel}" >-->
+                <!--<ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Label Content="{Binding Label}"></Label>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>-->
+            </ListBox>
         </Grid>
 
     </Grid>

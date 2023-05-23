@@ -20,6 +20,8 @@ namespace HaryPotterWpf.Win.UI
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
+        private static Random random = new();
+
         public Wookiee Wookiee { get; set; } = new() {  Label = "Chewie" };
 
         public ObservableCollection<Wookiee> Wookiees { get; set; } = new();
@@ -34,10 +36,10 @@ namespace HaryPotterWpf.Win.UI
             get => nbWookies;
             set
             {
+                this.worker.CancelAsync();
+
                 this.nbWookies = value;
                 this.PropertyChanged?.Invoke(this, new(nameof(nbWookies)));
-
-                this.InitListWookiees();
             }
         }
 
@@ -57,12 +59,24 @@ namespace HaryPotterWpf.Win.UI
             InitializeComponent();
             //this.btnOneWookie.DataContext = this.Wookiee;
 
+            this.worker.WorkerSupportsCancellation = true;
             this.worker.DoWork += Worker_DoWork;
+            this.lstWookies.ItemTemplate = this.Resources["wookieAsLabel"] as DataTemplate;
         }
 
         private void Worker_DoWork(object? sender, DoWorkEventArgs e)
         {
-            this.SlowMethod(1000);
+            //this.SlowMethod(1000);
+            while(! e.Cancel)
+            {
+                if (worker.CancellationPending)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+
+                this.MoveAllWookies();
+            }
         }
 
         private void btnName_Click(object sender, RoutedEventArgs e)
@@ -131,9 +145,31 @@ namespace HaryPotterWpf.Win.UI
             {
                 this.Wookiees.Add(new()
                 {
-                    Label = $"Wookie{i}"
+                    Label = $"Wookie{i}",
+                    Avatar = "avatar-02.jpg",
+                    Position = new(random.Next(0, 300), random.Next(0, 400))
                 });
             }
+        }
+
+        private void MoveAllWookies()
+        {
+            foreach (var item in this.Wookiees)
+            {
+                item.Move();
+                Thread.Sleep(100);
+            }
+        }
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
+            this.InitListWookiees();
+            this.worker.RunWorkerAsync();
+        }
+
+        private void btnStop_Click(object sender, RoutedEventArgs e)
+        {
+            this.worker.CancelAsync();
         }
     }
 }
