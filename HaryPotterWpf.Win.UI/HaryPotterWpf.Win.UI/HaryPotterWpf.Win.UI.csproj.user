@@ -7,6 +7,11 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Wookiees\ListWookiees\ListWookies.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Custom-1-Styles.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -14,6 +19,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Wookiees\ListWookiees\ListWookies.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

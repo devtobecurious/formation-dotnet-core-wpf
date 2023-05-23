@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HaryPotterWpf.Win.UI.ViewModels
+namespace HaryPotterWpf.Win.UI.Wookiees.ListWookiees.ViewModels
 {
-    public class MainWindowViewModel
+    public class ListWookieesViewModel
     {
-
     }
 }

@@ -55,3 +55,5 @@ D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterW
 D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\bin\Debug\net7.0-windows\Images\avatar-02.jpg
 D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\bin\Debug\net7.0-windows\Images\avatar-03.jpg
 D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\bin\Debug\net7.0-windows\Images\avatar-04.png
+D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\Wookiees\ListWookiees\ListWookies.g.cs
+D:\Works\Formations\Templates\dotnet\dotnet-wpf\HaryPotterWpf.Win.UI\HaryPotterWpf.Win.UI\obj\Debug\net7.0-windows\Wookiees\ListWookiees\ListWookies.baml

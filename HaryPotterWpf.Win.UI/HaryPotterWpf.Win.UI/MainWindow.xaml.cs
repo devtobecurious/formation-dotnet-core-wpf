@@ -1,4 +1,5 @@
 ﻿using HaryPotterWpf.Win.UI.Models;
+using HaryPotterWpf.Win.UI.Wookiees.ListWookiees;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
@@ -172,6 +173,15 @@ namespace HaryPotterWpf.Win.UI
         private void btnStop_Click(object sender, RoutedEventArgs e)
         {
             this.worker.CancelAsync();
-        } 
+        }
+
+        private void btnShowEdit_Click(object sender, RoutedEventArgs e)
+        {
+            ListWookies listWookies = new();
+            if (listWookies.ShowDialog().GetValueOrDefault(false))
+            {
+
+            }
+        }
     }
 }

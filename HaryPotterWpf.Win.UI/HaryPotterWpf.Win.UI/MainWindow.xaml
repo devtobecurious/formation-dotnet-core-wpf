@@ -13,13 +13,65 @@
         <converters:PathToImageConverter x:Key="pathToImageConverter"></converters:PathToImageConverter>
         <converters:EmptyOrNotExistPathVisibilityConverter x:Key="emptyOrNotExistPathVisibility"></converters:EmptyOrNotExistPathVisibilityConverter>
 
+        <Style x:Key="LabelAsTooltip" TargetType="Image">
+            <Setter Property="ToolTip">
+                <Setter.Value>
+                    <ToolTip Placement="Relative" HorizontalOffset="{Binding RelativeSource={RelativeSource Self}, Path=(ToolTip.HorizontalOffset), Mode=OneWay}" VerticalOffset="{Binding RelativeSource={RelativeSource Self}, Path=(ToolTip.VerticalOffset), Mode=OneWay}">
+                        <ToolTip.Resources>
+                            <Storyboard x:Key="floatAnimation">
+                                <DoubleAnimation Storyboard.TargetProperty="HorizontalOffset" From="-10" To="10" Duration="0:0:1" AutoReverse="True" RepeatBehavior="Forever"/>
+                                <DoubleAnimation Storyboard.TargetProperty="VerticalOffset" From="-10" To="10" Duration="0:0:1" AutoReverse="True" RepeatBehavior="Forever"/>
+                            </Storyboard>
+                        </ToolTip.Resources>
+                        <ToolTip.Triggers>
+                            <EventTrigger RoutedEvent="ToolTip.Opened">
+                                <BeginStoryboard Storyboard="{StaticResource floatAnimation}"/>
+                            </EventTrigger>
+                        </ToolTip.Triggers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="{Binding Label}"></Label>
+                        </Grid>
+                    </ToolTip>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="labelTooltip" TargetType="Label">
+            <Setter Property="Background" Value="Maroon"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <TranslateTransform/>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)"
+                                             From="-10" To="10" Duration="0:0:1" AutoReverse="True" RepeatBehavior="Forever"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+            
+        </Style>
+        
         <DataTemplate DataType="{x:Type models:Wookiee}" x:Key="wookieAsLabel">
             <Label >
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.5*" ></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Image Source="{Binding Avatar, Converter={StaticResource pathToImageConverter}}" Width="50"></Image>
+                    <Image Source="{Binding Avatar, Converter={StaticResource pathToImageConverter}}" Width="50" Style="{StaticResource LabelAsTooltip}" ></Image>
+                    <Label Content="{Binding Label}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="20,-20,10,0" Style="{StaticResource labelTooltip}">
+                    </Label> 
                 </Grid>
                 <Label.RenderTransform>
                     <TranslateTransform X="{Binding Position.X}" Y="{Binding Position.Y}"></TranslateTransform>
@@ -91,7 +143,8 @@
             <Slider Grid.Row="2" Grid.Column="0" Width="200" Height="50" x:Name="nbSteps" Value="{Binding NbWookies}"></Slider>
             <Button Grid.Row="2" Grid.Column="1" Content="Start" x:Name="btnStart" Click="btnStart_Click"></Button>
             <Button Grid.Row="2" Grid.Column="2" Content="Stop" x:Name="btnStop" Click="btnStop_Click"></Button>
-            <TextBlock Grid.Row="2" Grid.Column="3" FontSize="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Text="{Binding ElementName=nbSteps, Mode=OneWay, Path=Value}"></TextBlock>
+            <Button Grid.Row="2" Grid.Column="3" Content="Edit" x:Name="btnShowEdit" Click="btnShowEdit_Click"></Button>
+            <!--<TextBlock Grid.Row="2" Grid.Column="3" FontSize="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Text="{Binding ElementName=nbSteps, Mode=OneWay, Path=Value}"></TextBlock>-->
 
             <StackPanel x:Name="grdSteps" Grid.Row="3" Visibility="Hidden" Grid.ColumnSpan="2" DataContext="{Binding Wookiee}">
                 <!--<Button>
