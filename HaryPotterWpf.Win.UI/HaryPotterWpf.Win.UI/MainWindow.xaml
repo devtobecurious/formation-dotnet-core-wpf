@@ -11,12 +11,12 @@
     <Window.Resources>
         <converters:PathToImageConverter x:Key="pathToImageConverter"></converters:PathToImageConverter>
         <converters:EmptyOrNotExistPathVisibilityConverter x:Key="emptyOrNotExistPathVisibility"></converters:EmptyOrNotExistPathVisibilityConverter>
-        
+
         <Style TargetType="Button">
             <Setter Property="Width" Value="50"></Setter>
             <Setter Property="Height" Value="50"></Setter>
             <Setter Property="Margin" Value="10"></Setter>
-        </Style>       
+        </Style>
 
         <Style x:Key="buttonTransparent" TargetType="Button">
             <Setter Property="Background" Value="Transparent"></Setter>
@@ -57,7 +57,7 @@
                     <TextBlock Text="{Binding Index}" ></TextBlock>
                 </Label>
             </Grid>
-            
+
             <Grid Grid.Row="1" Grid.ColumnSpan="2" x:Name="grdInputs" DataContext="{Binding Wookiee}">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
@@ -70,10 +70,10 @@
             </Grid>
 
             <StackPanel>
-                
+
             </StackPanel>
 
-            <Slider Grid.Row="2" Grid.Column="0" Width="200" x:Name="nbSteps"></Slider>
+            <Slider Grid.Row="2" Grid.Column="0" Width="200" Height="50" x:Name="nbSteps" Value="{Binding NbWookies}"></Slider>
             <TextBlock Grid.Row="2" Grid.Column="1" FontSize="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Text="{Binding ElementName=nbSteps, Mode=OneWay, Path=Value}"></TextBlock>
 
             <StackPanel x:Name="grdSteps" Grid.Row="3" Visibility="Hidden" Grid.ColumnSpan="2" DataContext="{Binding Wookiee}">
@@ -84,8 +84,8 @@
                     <Image Source="pack://application:,,,/Resources/chewie-resource.png" Stretch="Uniform"></Image>
                 </Button>
             </StackPanel>
+            <ListBox ItemsSource="{Binding Wookiees}" Grid.Row="3" Grid.ColumnSpan="3"></ListBox>
         </Grid>
-        
-        
+
     </Grid>
 </Window>

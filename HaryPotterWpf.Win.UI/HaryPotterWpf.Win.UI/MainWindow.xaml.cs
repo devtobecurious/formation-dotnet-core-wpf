@@ -1,4 +1,5 @@
 ﻿using HaryPotterWpf.Win.UI.Models;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
 using System.Windows;
@@ -21,9 +22,24 @@ namespace HaryPotterWpf.Win.UI
     {
         public Wookiee Wookiee { get; set; } = new() {  Label = "Chewie" };
 
+        public ObservableCollection<Wookiee> Wookiees { get; set; } = new();
+
         private BackgroundWorker worker = new();
 
         public event PropertyChangedEventHandler? PropertyChanged;
+
+        private int nbWookies = 1;
+        public int NbWookies
+        {
+            get => nbWookies;
+            set
+            {
+                this.nbWookies = value;
+                this.PropertyChanged?.Invoke(this, new(nameof(nbWookies)));
+
+                this.InitListWookiees();
+            }
+        }
 
         private int index = 0;
         public int Index
@@ -106,6 +122,18 @@ namespace HaryPotterWpf.Win.UI
         private void btnName4_Click(object sender, RoutedEventArgs e)
         {
             this.worker.RunWorkerAsync();
+        }
+
+        private void InitListWookiees()
+        {
+            this.Wookiees.Clear();
+            for (int i = 0; i < this.NbWookies; i++)
+            {
+                this.Wookiees.Add(new()
+                {
+                    Label = $"Wookie{i}"
+                });
+            }
         }
     }
 }
