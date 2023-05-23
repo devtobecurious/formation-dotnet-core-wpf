@@ -21,6 +21,8 @@ namespace HaryPotterWpf.Win.UI
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
+        private readonly ListWookies listWookies;
+
         private static Random random = new();
 
         public Wookiee Wookiee { get; set; } = new() {  Label = "Chewie" };
@@ -55,8 +57,10 @@ namespace HaryPotterWpf.Win.UI
             }
         }
 
-        public MainWindow()
+        public MainWindow(ListWookies listWookies)
         {
+            this.listWookies = listWookies;
+
             InitializeComponent();
             //this.btnOneWookie.DataContext = this.Wookiee;
 
@@ -177,8 +181,7 @@ namespace HaryPotterWpf.Win.UI
 
         private void btnShowEdit_Click(object sender, RoutedEventArgs e)
         {
-            ListWookies listWookies = new();
-            if (listWookies.ShowDialog().GetValueOrDefault(false))
+            if (this.listWookies.ShowDialog().GetValueOrDefault(false))
             {
 
             }

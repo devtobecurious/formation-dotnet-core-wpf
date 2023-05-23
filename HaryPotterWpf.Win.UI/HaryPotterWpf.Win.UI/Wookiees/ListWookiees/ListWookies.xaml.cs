@@ -1,4 +1,5 @@
-﻿using HaryPotterWpf.Win.UI.Wookiees.ListWookiees.Services;
+﻿using HaryPotterWpf.Win.UI.Core.Services;
+using HaryPotterWpf.Win.UI.Wookiees.ListWookiees.Services;
 using HaryPotterWpf.Win.UI.Wookiees.ListWookiees.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -21,11 +22,10 @@ namespace HaryPotterWpf.Win.UI.Wookiees.ListWookiees
     /// </summary>
     public partial class ListWookies : Window
     {
-        public ListWookies()
+        public ListWookies(IWindowService service)
         {
             InitializeComponent();
 
-            ListWookieesWindowService service = new();
             ListWookieesViewModel viewModel = new()
             {
                 WindowService = service

@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using HaryPotterWpf.Win.UI.Core.Services;
+using HaryPotterWpf.Win.UI.Wookiees.ListWookiees;
+using HaryPotterWpf.Win.UI.Wookiees.ListWookiees.Services;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Configuration;
 using System.Data;
@@ -19,6 +22,8 @@ namespace HaryPotterWpf.Win.UI
                       ConfigureServices((context, services) =>
                       {
                           services.AddSingleton<MainWindow>();
+                          services.AddTransient<IWindowService, ListWookieesWindowService>();
+                          services.AddTransient<ListWookies>();
                       }).Build();
         }
 
