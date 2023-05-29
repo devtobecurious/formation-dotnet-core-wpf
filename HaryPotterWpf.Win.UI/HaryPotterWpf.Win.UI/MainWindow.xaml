@@ -113,6 +113,7 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Button x:Name="btnName" Click="btnName_Click" Grid.Row="0" Grid.ColumnSpan="1" Style="{DynamicResource buttonColorBackground}" >Launch</Button>
             <Button x:Name="btnName2" Click="btnName2_Click" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" Style="{DynamicResource buttonColorBackground}" >Launch 2</Button>
@@ -154,14 +155,16 @@
                     <Image Source="pack://application:,,,/Resources/chewie-resource.png" Stretch="Uniform"></Image>
                 </Button>
             </StackPanel>
-            <ListBox x:Name="lstWookies" ItemsSource="{Binding Wookiees}" Grid.Row="3" Grid.ColumnSpan="3"> <!--ItemTemplate="{StaticResource wookieAsLabel}" >-->
+            <ListBox x:Name="lstWookies" ItemsSource="{Binding Wookiees}" Grid.Row="3" Grid.ColumnSpan="3">
+                <!--ItemTemplate="{StaticResource wookieAsLabel}" >-->
                 <!--<ListBox.ItemTemplate>
                     <DataTemplate>
                         <Label Content="{Binding Label}"></Label>
                     </DataTemplate>
                 </ListBox.ItemTemplate>-->
             </ListBox>
-        </Grid>
 
+            <ListBox Grid.Row="4" ></ListBox>
+        </Grid>
     </Grid>
 </Window>

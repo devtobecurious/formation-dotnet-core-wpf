@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <SolidColorBrush x:Key="backgroundColor" Color="DarkOrange"></SolidColorBrush>
 
-    <Style x:Key="buttonColorBackground" TargetType="Button">
+    <Style x:Key="buttonColorBackground" TargetType="Button" >
         <Setter Property="Background" Value="{StaticResource backgroundColor}"></Setter>
         <Setter Property="Foreground" Value="White"></Setter>
         <Style.Triggers>

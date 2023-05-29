@@ -53,6 +53,7 @@ namespace HaryPotterWpf.Win.UI
             set
             {
                 index = value;
+
                 this.PropertyChanged?.Invoke(this, new(nameof(Index)));
             }
         }
